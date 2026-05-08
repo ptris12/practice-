@@ -23,7 +23,7 @@ noButton.addEventListener("click", () => {
 });
 
 yesButton.addEventListener("click", () => {
-  message.textContent = "Congrats Marijana Trisic ❤️";
+  message.textContent = "Congrats Marijana  ❤️";
   yesButton.disabled = true;
   noButton.disabled = true;
 
