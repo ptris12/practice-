@@ -1,0 +1,138 @@
+:root {
+  --bg-1: #fff0f6;
+  --bg-2: #ffe3ec;
+  --accent: #ff4d88;
+  --accent-dark: #e03170;
+  --yes: #2f9e44;
+  --yes-dark: #2b8a3e;
+  --no: #fa5252;
+  --no-dark: #e03131;
+  --card: #ffffffdd;
+  --text: #3a2a35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  background: radial-gradient(circle at top, var(--bg-2), var(--bg-1));
+}
+
+.landing-page {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+#confetti-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.card {
+  position: relative;
+  z-index: 20;
+  width: min(680px, 100%);
+  background: var(--card);
+  border-radius: 1.2rem;
+  text-align: center;
+  padding: 2.2rem 1.4rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 2px solid #ffd6e7;
+}
+
+h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  color: var(--accent-dark);
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #8f5872;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  min-height: 4rem;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  padding: 0.9rem 2.2rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-yes {
+  background: linear-gradient(180deg, var(--yes), var(--yes-dark));
+}
+
+.btn-no {
+  background: linear-gradient(180deg, var(--no), var(--no-dark));
+}
+
+.result-message {
+  min-height: 2.1rem;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.wishlist-page {
+  padding: 2rem 1rem;
+}
+
+.content {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1rem;
+  border: 2px solid #ffd6e7;
+  padding: 1.5rem 1.2rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.07);
+}
+
+section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ffe0ec;
+}
+
+h2 {
+  color: var(--accent-dark);
+  margin-bottom: 0.7rem;
+}
+
+h3 {
+  margin-bottom: 0.4rem;
+}
+
+li {
+  line-height: 1.6;
+}
